@@ -1,3 +1,8 @@
 :root {
-    background-color: red;
+    --syntax: brown;
+}
+
+#example {
+    color: var(--syntax);
+    font-family: 'Courier New', Courier, monospace;
 }
