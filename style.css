@@ -1,8 +1,14 @@
 :root {
-    --syntax: brown;
+    --syntax: yellow;
+    --dark: gray;
 }
 
-#example {
+.example {
+    background-color: var(--dark);
+    padding: 5px;
+}
+
+.syntax {
     color: var(--syntax);
     font-family: 'Courier New', Courier, monospace;
 }
