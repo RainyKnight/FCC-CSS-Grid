@@ -1,14 +1,17 @@
 :root {
     /* color palette */
-    --syntax: yellow;
-    --dark: rgba(0, 0, 0, 0.762);
-    --less-dark: rgba(136, 136, 136, 0.577);
-    --background: linen;
+    --black: black;
+    --dark-blue: #22223bff;
+    --blueberry: #4a4e69ff;
+    --salmon: #9a8c98ff;
+    --pinkish: #c9ada7ff;
+    --off-white: #f2e9e4ff;
     --white: white;
+    /*               */
+
     --normal-shadow: 0px 2px 5px black;
 
-
-    background-color: var(--dark);
+    background-color: var(--dark-blue);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -22,7 +25,7 @@ h1 {
 
 
 main {
-    background-color: var(--background);
+    background-color: var(--pinkish);
     margin: auto;
     margin-left: 10%;
     margin-right: 10%;
@@ -52,26 +55,32 @@ footer {
 }
 
 section {
-    margin: 20px 0 20px 0;
+    margin: 20px;
     padding: 2%;
-    background-color: var(--less-dark);
+    background-color: var(--white);
     box-shadow: var(--normal-shadow);
+    border-radius: 5px;
 }
 
 h2 {
     text-align: center;
     box-shadow: var(--normal-shadow);
-    background-color: var(--white);
+    background-color: var(--salmon);
+    color: var(--black);
     padding: 5px;
 }
 
 
 .example {
-    background-color: var(--dark);
-    padding: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    background-color: var(--dark-blue);
+    padding: 10px;
+    box-shadow: var(--normal-shadow);
 }
 
 .syntax {
-    color: var(--syntax);
+    color: var(--off-white);
     font-family: 'Courier New', Courier, monospace;
 }
