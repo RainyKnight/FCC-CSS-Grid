@@ -19,8 +19,10 @@ h1 {
     text-align: center;
     color: var(--white);
     font-size: 48px;
-    margin: 50px;
-    margin-bottom: 10px;
+    margin: 60px 50px 20px 50px;
+    font-family:'Times New Roman', Times, serif;
+    box-shadow: var(--normal-shadow);
+    border-style: solid;
 }
 
 
@@ -37,10 +39,23 @@ nav {
     position: fixed;
     background-color: var(--white);
     border-style: solid;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     left: 0px;
     top: 0px;
+}
+
+nav>a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--blueberry);
+    padding: 10px;
+    border-style: solid;
+}
+
+nav>a:hover {
+    background-color: var(--pinkish);
+    color: var(--dark-blue);
 }
 
 footer {
@@ -68,6 +83,7 @@ h2 {
     background-color: var(--salmon);
     color: var(--black);
     padding: 5px;
+    border-style: solid;
 }
 
 
