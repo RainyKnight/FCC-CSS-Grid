@@ -8,9 +8,7 @@
     --off-white: #f2e9e4ff;
     --white: white;
     /*               */
-
     --normal-shadow: 0px 2px 5px black;
-
     background-color: var(--dark-blue);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -20,11 +18,10 @@ h1 {
     color: var(--white);
     font-size: 48px;
     margin: 70px 50px 20px 50px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     box-shadow: var(--normal-shadow);
     border-style: solid;
 }
-
 
 main {
     background-color: var(--pinkish);
@@ -92,7 +89,6 @@ p {
     font-size: 1.2em;
 }
 
-
 .example {
     margin: auto;
     margin-bottom: 10px;
@@ -106,4 +102,43 @@ p {
 .syntax {
     color: var(--off-white);
     font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    display: grid;
+    color: var(--black);
+    font-size: 40px;
+    /* min-height: 300px; */
+    text-align: center;
+    grid-template-columns: auto;
+}
+
+.container>div {
+    border-style: solid;
+    margin: 5px;
+    box-shadow: var(--normal-shadow);
+}
+
+.d1 {
+    background-color: red;
+}
+
+.d2 {
+    background-color: orange;
+}
+
+.d3 {
+    background: yellow;
+}
+
+.d4 {
+    background: green;
+}
+
+.d5 {
+    background: blue;
+}
+
+.d6 {
+    background: violet;
 }
