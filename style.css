@@ -119,11 +119,11 @@ p {
 }
 
 .column {
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .row {
-    grid-template-rows: 50px 50px 50px;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 /* box colors */
