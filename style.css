@@ -104,6 +104,9 @@ p {
     font-size: 105%;
     font-family: 'Courier New', Courier, monospace;
 }
+hr {
+    margin-top: 20px;
+}
 
 .container {
     display: grid;
