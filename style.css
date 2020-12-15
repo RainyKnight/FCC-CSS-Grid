@@ -100,7 +100,7 @@ p {
 }
 
 .syntax {
-    color: var(--off-white);
+    color: var(--white);
     font-family: 'Courier New', Courier, monospace;
 }
 
