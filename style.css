@@ -115,30 +115,31 @@ p {
 
 .container>div {
     border-style: solid;
-    margin: 5px;
-    box-shadow: var(--normal-shadow);
+    border-width: 1px;
 }
 
+/* box colors */
+
 .d1 {
-    background-color: red;
+    background-color: var(--salmon);
 }
 
 .d2 {
-    background-color: orange;
+    background-color: var(--off-white);
 }
 
 .d3 {
-    background: yellow;
+    background: var(--salmon);
 }
 
 .d4 {
-    background: green;
+    background: var(--off-white);
 }
 
 .d5 {
-    background: blue;
+    background: var(--salmon);
 }
 
 .d6 {
-    background: violet;
+    background: var(--off-white);
 }
