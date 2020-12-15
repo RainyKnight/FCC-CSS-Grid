@@ -101,6 +101,7 @@ p {
 
 .syntax {
     color: var(--white);
+    font-size: 105%;
     font-family: 'Courier New', Courier, monospace;
 }
 

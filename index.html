@@ -94,7 +94,7 @@
             <p>Sometimes you want a gap between the items.</p>
             <p>Here are some examples:</p>
             <article class="example" id="column-gap">
-                <p class="syntax">grid-column-gap: 10px</p>
+                <p class="syntax">grid-column-gap: 10px;</p>
                 <div class="container column" style="grid-column-gap: 10px;">
                     <div class="d1">1</div>
                     <div class="d2">2</div>
@@ -105,8 +105,21 @@
                 </div>
             </article>
             <article class="example" id="row-gap">
-                <p class="syntax">grid-row-gap: 10px</p>
+                <p class="syntax">grid-row-gap: 10px;</p>
                 <div class="container row" style="grid-row-gap: 10px;">
+                    <div class="d1">1</div>
+                    <div class="d2">2</div>
+                    <div class="d3">3</div>
+                    <div class="d4">4</div>
+                    <div class="d5">5</div>
+                    <div class="d6">6</div>
+                </div>
+            </article>
+            <p>There's also shorthand that can be used when describing the gap.</p>
+            <p>grid-gap: &#60;rows&#62; &#60;columns&#62;;</p>
+            <article class="example" id="gap-shorthand">
+                <p class="syntax">grid-gap: 100px 20px;</p>
+                <div class="container column" style="grid-gap: 100px 20px;">
                     <div class="d1">1</div>
                     <div class="d2">2</div>
                     <div class="d3">3</div>
