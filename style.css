@@ -187,6 +187,7 @@ box-shadow: var(--normal-shadow);
 input[type=submit]:hover {
     background-color: var(--blueberry);
     color: var(--white);
+    cursor: pointer;
 }
 
 /* Feedback form above */
