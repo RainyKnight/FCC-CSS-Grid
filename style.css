@@ -162,3 +162,31 @@ hr {
 .d6 {
     background: var(--off-white);
 }
+
+/* Feedback form below */
+
+input[type=text], textarea {
+    width: 100%;
+    border: 1px solid var(--blueberry);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+input[type=submit] {
+background-color: var(--salmon);
+color: var(--black);
+width: 20%;
+padding: 5px;
+border-radius: 5px;
+box-shadow: var(--normal-shadow);
+}
+
+input[type=submit]:hover {
+    background-color: var(--blueberry);
+    color: var(--white);
+}
+
+/* Feedback form above */
