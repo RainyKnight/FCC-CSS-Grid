@@ -135,7 +135,8 @@
         <section id="spacing" ;">
             <h2>Spacing</h2>
             <img src="https://www.w3schools.com/css/grid_lines.png" alt="grid lines graph">
-            <p>Spacing affects the elements within the containers themselves.</p>
+            <p>Spacing affects the elements within the containers themselves. So the CSS below is applied directly to the box that stretches.</p>
+            <p></p>
             <article class="example" id="grid-column">
                 <p class="syntax">grid-column: 2/4;</p>
                 <div class="container column">
@@ -147,6 +148,15 @@
                     <div class="d6">6</div>
                 </div>
             </article>
+            <p>The "2/4" specifies it will span from column lines 2-4.</p>
+            <article class="example" id="grid-row">
+                <p class="syntax">grid-row: 2/4;</p>
+                <div class="container row">
+                    <div class="d1">1</div>
+                    <div class="d2" style="grid-row: 2/4;">2</div>
+                </div>
+            </article>
+            <p>The " 2/4" specifies it will span from row lines 2-4.</p>
         </section>
 
 
