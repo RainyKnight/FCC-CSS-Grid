@@ -137,6 +137,14 @@ hr {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.wide {
+    width: 100px;
+}
+
+.tall {
+    min-height: 100px;
+}
+
 /* box colors */
 
 .d1 {
@@ -177,12 +185,12 @@ input[type=text], textarea {
 }
 
 input[type=submit] {
-background-color: var(--salmon);
-color: var(--black);
-width: 20%;
-padding: 5px;
-border-radius: 5px;
-box-shadow: var(--normal-shadow);
+    background-color: var(--salmon);
+    color: var(--black);
+    width: 20%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: var(--normal-shadow);
 }
 
 input[type=submit]:hover {

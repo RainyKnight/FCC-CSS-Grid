@@ -132,11 +132,10 @@
             </article>
         </section>
 
-        <section id="spacing" ;">
+        <section id="spacing">
             <h2>Spacing</h2>
             <img src="https://www.w3schools.com/css/grid_lines.png" alt="grid lines graph">
             <p>Spacing affects the elements within the containers themselves. So the CSS below is applied directly to the box that stretches.</p>
-            <p></p>
             <article class="example" id="grid-column">
                 <p class="syntax">grid-column: 2/4;</p>
                 <div class="container columns rows">
@@ -161,7 +160,33 @@
             <p>The " 2/4" specifies it will span from row lines 2-4.</p>
         </section>
 
+        <section id="align">
+            <h2>Align</h2>
+            <p>Items can be arranged within their cells to position toward the <code>start</code>, <code>center</code>, or <code>end</code>.</p>
+            <p>Align means vertical positioning.</p>
+            <article class="example" id="align-self">
+                <p class="syntax">align-self:</p>
+                <div class="container columns tall">
+                    <div class="d1" style="align-self: start;">1</div>
+                    <div class="d2" style="align-self: center;">2</div>
+                    <div class="d3" style="align-self: end;">3</div>
+                </div>
+            </article>
+        </section>
 
+        <section id="justify">
+            <h2>Justify</h2>
+            <p>Items can be arranged within their cells to position toward the <code>start</code>, <code>center</code>, or <code>end</code>.</p>
+            <p>Justify means horizontal positioning.</p>
+            <article class="example" id="justify-self">
+                <p class="syntax">justify-self:</p>
+                <div class="container">
+                    <div class="d1 wide" style="justify-self: start;">1</div>
+                    <div class="d2 wide" style="justify-self: center;">2</div>
+                    <div class="d3 wide" style="justify-self: end;">3</div>
+                </div>
+            </article>
+        </section>
 
     </main>
 
