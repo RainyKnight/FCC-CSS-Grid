@@ -129,11 +129,11 @@ hr {
     border-width: 1px;
 }
 
-.column {
+.columns {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.row {
+.rows {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
