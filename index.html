@@ -26,12 +26,12 @@
             <article class="example">
                 <p class="syntax">display: grid;</p>
                 <div class="container">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5">5</div>
-                    <div class="d6">6</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
                 </div>
             </article>
         </section>
@@ -42,12 +42,12 @@
             <article class="example">
                 <p class="syntax">grid-template-columns: 50px 100px 50px;</p>
                 <div class="container" style="grid-template-columns: 50px 100px 50px;">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5">5</div>
-                    <div class="d6">6</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
                 </div>
             </article>
             <p>The number of width declarations determine how many columns there will be.</p>
@@ -59,9 +59,9 @@
             <article class="example">
                 <p class="syntax">grid-template-rows: 50px 100px 50px;</p>
                 <div class="container" style="grid-template-rows: 50px 100px 50px;">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
                 </div>
             </article>
             <p>Similar to columns, the number of width declarations determine how many rows there will be.</p>
@@ -76,12 +76,12 @@
             <article class="example">
                 <p class="syntax">grid-template-columns: auto 50px 10% 2fr 1fr;</p>
                 <div class="container" style="grid-template-columns: auto 50px 10% 2fr 1fr;">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5">5</div>
-                    <div class="d6">6</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
                 </div>
 
             </article>
@@ -96,23 +96,23 @@
             <article class="example" id="column-gap">
                 <p class="syntax">grid-column-gap: 10px;</p>
                 <div class="container columns" style="grid-column-gap: 10px;">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5">5</div>
-                    <div class="d6">6</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
                 </div>
             </article>
             <article class="example" id="row-gap">
                 <p class="syntax">grid-row-gap: 10px;</p>
                 <div class="container columns rows" style="grid-row-gap: 10px;">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5">5</div>
-                    <div class="d6">6</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
                 </div>
             </article>
             <hr>
@@ -122,12 +122,12 @@
             <article class="example" id="gap-shorthand">
                 <p class="syntax">grid-gap: 100px 20px;</p>
                 <div class="container columns rows" style="grid-gap: 100px 20px;">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5">5</div>
-                    <div class="d6">6</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
                 </div>
             </article>
         </section>
@@ -140,22 +140,22 @@
             <article class="example" id="grid-column">
                 <p class="syntax">grid-column: 2/4;</p>
                 <div class="container columns rows">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5" style="grid-column: 2/4;">5</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark" style="grid-column: 2/4;">5</div>
                 </div>
             </article>
             <p>The "2/4" specifies it will span from column lines 2-4.</p>
             <article class="example" id="grid-row">
                 <p class="syntax">grid-row: 2/4;</p>
                 <div class="container columns rows">
-                    <div class="d1">1</div>
-                    <div class="d2">2</div>
-                    <div class="d3">3</div>
-                    <div class="d4">4</div>
-                    <div class="d5" style="grid-column: 2/4; grid-row: 2/4;">5</div>
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark" style="grid-column: 2/4; grid-row: 2/4;">5</div>
                 </div>
             </article>
             <p>The " 2/4" specifies it will span from row lines 2-4.</p>
@@ -171,9 +171,9 @@
             <article class="example" id="align-self">
                 <p class="syntax">align-self:</p>
                 <div class="container columns" style="height: 300px;">
-                    <div class="d1 tall" style="align-self: start;">1</div>
-                    <div class="d2 tall" style="align-self: center;">2</div>
-                    <div class="d3 tall" style="align-self: end;">3</div>
+                    <div class="dark tall" style="align-self: start;">1</div>
+                    <div class="light tall" style="align-self: center;">2</div>
+                    <div class="dark tall" style="align-self: end;">3</div>
                 </div>
             </article>
             <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
@@ -182,9 +182,9 @@
             <article class="example" id="align-items">
                 <p class="syntax">align-items: center;</p>
                 <div class="container columns" style="height: 300px; align-items: center;">
-                    <div class="d1 tall">1</div>
-                    <div class="d2 tall">2</div>
-                    <div class="d3 tall">3</div>
+                    <div class="dark tall">1</div>
+                    <div class="light tall">2</div>
+                    <div class="dark tall">3</div>
                 </div>
             </article>
             <p>The <code>items</code> property defines that this CSS it applied to the container and affects all items
@@ -201,9 +201,9 @@
             <article class="example" id="justify-self">
                 <p class="syntax">justify-self:</p>
                 <div class="container">
-                    <div class="d1 wide" style="justify-self: start;">1</div>
-                    <div class="d2 wide" style="justify-self: center;">2</div>
-                    <div class="d3 wide" style="justify-self: end;">3</div>
+                    <div class="dark wide" style="justify-self: start;">1</div>
+                    <div class="light wide" style="justify-self: center;">2</div>
+                    <div class="dark wide" style="justify-self: end;">3</div>
                 </div>
             </article>
             <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
@@ -212,9 +212,9 @@
             <article class="example rows" id="justify-items">
                 <p class="syntax">justify-items: center;</p>
                 <div class="container" style="justify-items: center;">
-                    <div class="d1 wide">1</div>
-                    <div class="d2 wide">2</div>
-                    <div class="d3 wide">3</div>
+                    <div class="dark wide">1</div>
+                    <div class="light wide">2</div>
+                    <div class="dark wide">3</div>
                 </div>
             </article>
             <p>The <code>items</code> property defines that this CSS it applied to the container and affects all items
@@ -237,6 +237,8 @@
 <!-- TODO List
 
 Grid everything
+
+Fix columns
 
 -->
 

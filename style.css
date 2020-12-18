@@ -147,28 +147,12 @@ hr {
 
 /* box colors */
 
-.d1 {
+.dark {
     background-color: var(--salmon);
 }
 
-.d2 {
+.light {
     background-color: var(--off-white);
-}
-
-.d3 {
-    background: var(--salmon);
-}
-
-.d4 {
-    background: var(--off-white);
-}
-
-.d5 {
-    background: var(--salmon);
-}
-
-.d6 {
-    background: var(--off-white);
 }
 
 /* Feedback form below */
