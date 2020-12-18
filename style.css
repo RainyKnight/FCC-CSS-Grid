@@ -138,11 +138,11 @@ hr {
 }
 
 .wide {
-    min-width: 50%;
+    width: 50%;
 }
 
 .tall {
-    min-height: 50%;
+    height: 50%;
 }
 
 /* box colors */
