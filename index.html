@@ -162,8 +162,10 @@
 
         <section id="align">
             <h2>Align</h2>
-            <p>Items can be arranged within their cells to position toward the <code>start</code>, <code>center</code>, or <code>end</code>.</p>
+            <p>Items can be arranged within their cells to position toward the <code>start</code>, <code>center</code>, or <code>end</code> respectively.</p>
             <p>Align means vertical positioning.</p>
+            <hr>
+            <h3><u>Individual Items</u></h3>
             <article class="example" id="align-self">
                 <p class="syntax">align-self:</p>
                 <div class="container columns" style="height: 300px;">
@@ -172,6 +174,18 @@
                     <div class="d3 tall" style="align-self: end;">3</div>
                 </div>
             </article>
+            <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
+            <hr>
+            <h3><u>All Items</u></h3>
+            <article class="example" id="align-items">
+                <p class="syntax">align-items: center;</p>
+                <div class="container columns" style="height: 300px; align-items: center;">
+                    <div class="d1 tall">1</div>
+                    <div class="d2 tall">2</div>
+                    <div class="d3 tall">3</div>
+                </div>
+            </article>
+            <p>The <code>items</code> property defines that this CSS it applied to the container and affects all items within.</p>
         </section>
 
         <section id="justify">
