@@ -26,7 +26,8 @@
             <p>Before we can use CSS Grid, we need to declare a grid container.</p>
             <p>Here's an example:</p>
             <article class="example">
-                <p class="syntax">display: grid;</p>
+                <p class="property">display:</p>
+                <p class="value"> grid;</p>
                 <div class="container">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -42,7 +43,8 @@
             <p>Content can be organized into columns.</p>
             <p>Here's an example:</p>
             <article class="example">
-                <p class="syntax">grid-template-columns: 1fr 2fr 1fr;</p>
+                <p class="property">grid-template-columns: </p>
+                <p class="value">1fr 2fr 1fr;</p>
                 <div class="container" style="grid-template-columns: 1fr 2fr 1fr;">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -59,7 +61,8 @@
             <p>Content can be organized into rows.</p>
             <p>Here's an example:</p>
             <article class="example">
-                <p class="syntax">grid-template-rows: 50px 100px 50px;</p>
+                <p class="property">grid-template-rows:</p>
+                <p class="value">50px 100px 50px;</p>
                 <div class="container" style="grid-template-rows: 50px 100px 50px;">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -76,7 +79,8 @@
             <p>There are multiple ways to declare the width of a row.</p>
             <p>Here's an example:</p>
             <article class="example">
-                <p class="syntax">grid-template-columns: auto 50px 10% 2fr 1fr;</p>
+                <p class="property">grid-template-columns:</p>
+                <p class="value"> auto 50px 10% 2fr 1fr;</p>
                 <div class="container" style="grid-template-columns: auto 50px 10% 2fr 1fr;">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -96,7 +100,8 @@
             <p>Sometimes you want a gap between the items.</p>
             <p>Here are some examples:</p>
             <article class="example" id="column-gap">
-                <p class="syntax">grid-column-gap: 10px;</p>
+                <p class="property">grid-column-gap:</p>
+                <p class="value"> 10px;</p>
                 <div class="container columns" style="grid-column-gap: 10px;">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -107,7 +112,8 @@
                 </div>
             </article>
             <article class="example" id="row-gap">
-                <p class="syntax">grid-row-gap: 10px;</p>
+                <p class="property">grid-row-gap:</p>
+                <p class="value"> 10px;</p>
                 <div class="container columns rows" style="grid-row-gap: 10px;">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -122,7 +128,8 @@
             <p>There's also shorthand that can be used when describing the gap.</p>
             <p>grid-gap: &#60;rows&#62; &#60;columns&#62;;</p>
             <article class="example" id="gap-shorthand">
-                <p class="syntax">grid-gap: 100px 20px;</p>
+                <p class="property">grid-gap:</p>
+                <p class="value"> 100px 20px;</p>
                 <div class="container columns rows" style="grid-gap: 100px 20px;">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -140,7 +147,8 @@
             <p>Spacing affects the elements within the containers themselves. So the CSS below is applied directly to
                 the box that stretches.</p>
             <article class="example" id="grid-column">
-                <p class="syntax">grid-column: 2/4;</p>
+                <p class="property">grid-column:</p>
+                <p class="value"> 2/4;</p>
                 <div class="container columns rows">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -151,7 +159,8 @@
             </article>
             <p>The "2/4" specifies it will span from column lines 2-4.</p>
             <article class="example" id="grid-row">
-                <p class="syntax">grid-row: 2/4;</p>
+                <p class="property">grid-row:</p>
+                <p class="value"> 2/4;</p>
                 <div class="container columns rows">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -171,7 +180,10 @@
             <hr>
             <h3><u>Individual Items</u></h3>
             <article class="example" id="align-self">
-                <p class="syntax">align-self:</p>
+                <p class="property">align-self:</p>
+                <p class="value">start;</p>
+                <p class="value">center;</p>
+                <p class="value">end;</p>
                 <div class="container columns" style="height: 300px;">
                     <div class="dark tall" style="align-self: start;">1</div>
                     <div class="light tall" style="align-self: center;">2</div>
@@ -182,7 +194,8 @@
             <hr>
             <h3><u>All Items</u></h3>
             <article class="example" id="align-items">
-                <p class="syntax">align-items: center;</p>
+                <p class="property">align-items:</p>
+                <p class="value">center;</p>
                 <div class="container columns" style="height: 300px; align-items: center;">
                     <div class="dark tall">1</div>
                     <div class="light tall">2</div>
@@ -201,7 +214,10 @@
             <hr>
             <h3><u>Individual Items</u></h3>
             <article class="example" id="justify-self">
-                <p class="syntax">justify-self:</p>
+                <p class="property">justify-self:</p>
+                <p class="value">start;</p>
+                <p class="value">center;</p>
+                <p class="value">end;</p>
                 <div class="container">
                     <div class="dark wide" style="justify-self: start;">1</div>
                     <div class="light wide" style="justify-self: center;">2</div>
@@ -212,7 +228,8 @@
             <hr>
             <h3><u>All Items</u></h3>
             <article class="example rows" id="justify-items">
-                <p class="syntax">justify-items: center;</p>
+                <p class="property">justify-items:</p>
+                <p class="value">center;</p>
                 <div class="container" style="justify-items: center;">
                     <div class="dark wide">1</div>
                     <div class="light wide">2</div>
@@ -244,7 +261,10 @@
             <p><code>". content ."</code></p>
             <p><code>"footer footer footer"</code></p>
             <article class="example" id="gap-shorthand">
-                <p class="syntax">grid-template-areas:</p>
+                <p class="property">grid-template-areas:</p>
+                <p class="value">"header header header"</p>
+                <p class="value">". content ."</p>
+                <p class="value">"footer footer footer";</p>
                 <div class="container columns rows" style="">
                     <div class=" dark">1</div>
                     <div class="light">2</div>
@@ -274,8 +294,6 @@
 <!-- TODO List
 
 Grid everything
-
-Add up button
 
 Animate color changes
 

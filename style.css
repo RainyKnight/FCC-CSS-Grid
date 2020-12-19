@@ -107,7 +107,7 @@ ul {
 @media (max-width: 1000px) {
     ul {
         grid-template-columns: 0.1fr 3fr 0.1fr;
-        }
+    }
 }
 
 li {
@@ -126,10 +126,20 @@ li {
     box-shadow: var(--normal-shadow);
 }
 
-.syntax {
+article>p {
     color: var(--white);
     font-size: 105%;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.property {
+    text-align: left;
+}
+
+.value {
+    text-align: center;
 }
 
 hr {
@@ -137,6 +147,7 @@ hr {
 }
 
 .container {
+    margin-top: 10px;
     display: grid;
     color: var(--black);
     font-size: 40px;
