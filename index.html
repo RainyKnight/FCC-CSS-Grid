@@ -224,7 +224,8 @@
         <section id="pneumonics-trick">
             <h2>Mnemonics</h2>
             <p>Having trouble remembering the difference between align and justify?</p>
-            <blockquote cite="https://css-tricks.com/a-quick-way-to-remember-difference-between-justify-content-align-items/">
+            <blockquote
+                cite="https://css-tricks.com/a-quick-way-to-remember-difference-between-justify-content-align-items/">
                 <ul>
                     <li><code>justify-content:</code> longer word: horizontal alignment</li>
                     <li><code>align-items:</code> shorter word: vertical alignment</li>
@@ -234,7 +235,24 @@
 
         <section id="areas">
             <h2>Areas</h2>
-            <p></p>
+            <p>Sections of a grid can be combined into areas.</p>
+            <p><code>grid-template-areas:</code></p>
+            <p><code>"header header
+                    header"</code></p>
+            <p><code>". content ."</code></p>
+            <p><code>"footer footer footer"</code></p>
+            <article class="example" id="gap-shorthand">
+                <p class="syntax">grid-template-areas:</p>
+                <div class="container columns rows" style="grid-template-areas: " header header
+                    header" ". content ." "footer footer footer"">
+                    <div class=" dark">1</div>
+                <div class="light">2</div>
+                <div class="dark">3</div>
+                <div class="light">4</div>
+                <div class="dark">5</div>
+                <div class="light">6</div>
+                </div>
+
         </section>
 
     </main>
