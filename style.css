@@ -15,6 +15,10 @@
     scroll-behavior: smooth;
 }
 
+#top {
+    margin-top: -10px;
+}
+
 h1 {
     text-align: center;
     color: var(--white);
