@@ -222,9 +222,11 @@ input[type=submit]:hover {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    font-size: 24px;
+    font-size: 2hv;
     padding: 10px;
-    border-radius: 50%;
+    border-style: solid;
+    border-radius: 10px;
+    color: var(--dark-blue);
     background-color: var(--salmon);
     z-index: 2;
 }
