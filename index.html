@@ -272,7 +272,8 @@
                     <div class="light">6</div>
                 </div>
             </article>
-            <p>The below example is applied to the individual items in the container.</p>
+            <hr>
+            <p>The below example is applied to the individual items in the container to define where they go:</p>
             <article class="example" id="gap-shorthand">
                 <p class="property">grid-area:</p>
                 <p class="value">header;</p>
@@ -285,6 +286,13 @@
                     <div class="light">6</div>
                 </div>
             </article>
+            <p>Further declarations of the same area overlap the previous one.</p>
+            <hr>
+            <p>But what if there's isn't a template already created?</p>
+            <p>A template can be created quickly on the fly with the below example:</p>
+            <p><code>item1 { grid-area: 1/1/2/4; }</code></p>
+            <p>x start/y start/x end/y end;</p>
+            <p>The numbers reference the lines of the grid as defined earlier in Lines section.</p>
 
         </section>
 
@@ -306,6 +314,8 @@
 <!-- TODO List
 
 Grid everything
+
+Separate into pages
 
 -->
 
