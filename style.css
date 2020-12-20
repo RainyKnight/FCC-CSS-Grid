@@ -196,6 +196,10 @@ hr {
 
 /* Feedback form below */
 
+.grid-area {
+    grid-template-areas: "header header header" ". content ." "footer footer footer";
+}
+
 input[type=text], textarea {
     width: 100%;
     border: 1px solid var(--blueberry);

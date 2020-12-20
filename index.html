@@ -257,17 +257,13 @@
         <section id="areas">
             <h2>Areas</h2>
             <p>Sections of a grid can be combined into areas.</p>
-            <p><code>grid-template-areas:</code></p>
-            <p><code>"header header
-                    header"</code></p>
-            <p><code>". content ."</code></p>
-            <p><code>"footer footer footer"</code></p>
-            <article class="example" id="gap-shorthand">
+            <p>You fist need to declare a template to define </p>
+            <article class="example" id="area-tmeplate">
                 <p class="property">grid-template-areas:</p>
                 <p class="value">"header header header"</p>
                 <p class="value">". content ."</p>
                 <p class="value">"footer footer footer";</p>
-                <div class="container columns rows" style="">
+                <div class="container columns rows grid-area">
                     <div class=" dark">1</div>
                     <div class="light">2</div>
                     <div class="dark">3</div>
@@ -275,6 +271,20 @@
                     <div class="dark">5</div>
                     <div class="light">6</div>
                 </div>
+            </article>
+            <p>The below example is applied to the individual items in the container.</p>
+            <article class="example" id="gap-shorthand">
+                <p class="property">grid-area:</p>
+                <p class="value">header;</p>
+                <div class="container columns rows grid-area">
+                    <div class="dark" style="grid-area: header;">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
 
         </section>
 
