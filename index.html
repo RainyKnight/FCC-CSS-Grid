@@ -308,8 +308,8 @@
             </p>
             <article class="example" id="repeat-columns">
                 <p class="property">grid-template-columns:</p>
-                <p class="value">repeat(4, 1fr);</p>
-                <div class="container" style=" grid-template-columns: repeat(4,1fr);">
+                <p class="value">repeat(10, 1fr);</p>
+                <div class="container" style=" grid-template-columns: repeat(10,1fr);">
                     <div class=" dark">1</div>
                     <div class="light">2</div>
                     <div class="dark">3</div>
@@ -319,6 +319,11 @@
                 </div>
             </article>
             <p>In the above example, the column repeats four times each with a width of one fraction of the total.</p>
+            <p>Here's what the statement would look like without the function:</p>
+            <article class="example">
+                <p class="property">grid-template-columns: </p>
+                <p class="value">1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;</p>
+            </article>
         </section>
 
     </main>
