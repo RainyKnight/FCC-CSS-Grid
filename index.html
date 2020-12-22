@@ -301,10 +301,24 @@
             </article>
         </section>
 
-        <section id="repetition">
-            <h2>Repetition</h2>
+        <section id="repeat">
+            <h2>Repeat</h2>
             <p>Let's say you have a grid that's 100x100. </p>
-            <p>It would be very tedious to declare every area over and over. So developers use a repetition function.</p>
+            <p>It would be very tedious to declare every area over and over. So developers use a repetition function.
+            </p>
+            <article class="example" id="repeat-columns">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(4, 1fr);</p>
+                <div class="container" style=" grid-template-columns: repeat(4,1fr);">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>In the above example, the column repeats four times each with a width of one fraction of the total.</p>
         </section>
 
     </main>
