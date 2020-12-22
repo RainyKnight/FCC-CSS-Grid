@@ -238,7 +238,6 @@ input[type=submit]:hover {
     border-radius: 10px;
     color: var(--dark-blue);
     background-color: var(--salmon);
-    z-index: 2;
 }
 
 #up-button:hover {
