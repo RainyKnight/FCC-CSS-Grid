@@ -320,10 +320,25 @@
             </article>
             <p>In the above example, the column repeats four times each with a width of one fraction of the total.</p>
             <p>Here's what the statement would look like without the function:</p>
-            <article class="example">
+            <article class="example" id="no-repeat">
                 <p class="property">grid-template-columns: </p>
                 <p class="value">1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;</p>
             </article>
+            <hr>
+            <p>The function can even copy complex declarations:</p>
+            <article class="example" id="complex-repeat">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(2,10px 50px 20px);</p>
+                <div class="container" style=" grid-template-columns: repeat(2,10px 50px 20px);">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>As you can see the pattern of <code>10px 50px 20px</code> is repeated twice in the example above.</p>
         </section>
 
     </main>
