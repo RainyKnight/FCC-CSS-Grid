@@ -343,7 +343,9 @@
 
         <section id="minmax">
             <h2>Min Max</h2>
-            <p>Sometimes you want to define bounds to the resizing of elements within your grid.
+            <p>Sometimes you want to define bounds to the resizing of elements within your grid.</p>
+            <hr>
+            <h3>The Problem</h3>
             <p>For example, if a window becomes too small or too large, some elements may extend beyond the edges of the
                 container to look something like this:</p>
             <article class="example" id="overflow-example">
@@ -358,12 +360,13 @@
                     <div class="light">6</div>
                 </div>
             </article>
-
-            <p>With <code>minmax()</code>, the rows or columns can stop resizing at specified measurements.</p>
+            <hr>
+            <h3>The Solution</h3>
+            <p>With <code>minmax()</code>, the rows or columns can stop resizing at specified measurements:</p>
 
             <article class="example" id="minmax-example">
                 <p class="property">grid-template-columns:</p>
-                <p class="value">repeat(3, minmax());</p>
+                <p class="value">repeat(3, minmax(10px, 150px));</p>
                 <div class="container" style="grid-template-columns: repeat(3, minmax(10px, 150px));">
                     <div class="dark">1</div>
                     <div class="light">2</div>
@@ -373,6 +376,8 @@
                     <div class="light">6</div>
                 </div>
             </article>
+            <p>In the above example, the columns can resize anywhere from 10px to 150px in width.</p>
+            <p>Try resizing the window to see it in action.</p>
         </section>
 
     </main>
