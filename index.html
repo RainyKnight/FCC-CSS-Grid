@@ -381,6 +381,21 @@
 
         <section id="auto-fill">
             <h2>Auto-fill</h2>
+            <p>The auto fill function can dynamically adjust how many items populate based on the remaining room in a row or column.</p>
+            <p>Here's an example:</p>
+            <article class="example" id="auto-fill-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(auto-fill, minmax(10px, 150px));</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fill, minmax(10px, 100px));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>It takes the place of the number of iterations declaration.</p>
         </section>
 
     </main>
