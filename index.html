@@ -385,8 +385,8 @@
             <p>Here's an example:</p>
             <article class="example" id="auto-fill-example">
                 <p class="property">grid-template-columns:</p>
-                <p class="value">repeat(auto-fill, minmax(10px, 150px));</p>
-                <div class="container" style="grid-template-columns: repeat(auto-fill, minmax(10px, 100px));">
+                <p class="value">repeat(auto-fill, minmax(75px, 1fr);</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));">
                     <div class="dark">1</div>
                     <div class="light">2</div>
                     <div class="dark">3</div>
@@ -396,6 +396,24 @@
                 </div>
             </article>
             <p>It takes the place of the number of iterations declaration.</p>
+        </section>
+
+        <section id="auto-fit">
+            <h2>Auto-fit</h2>
+            <p>Auto fit is almost identical to auto fill, except it also stretches the items once there's ample space remaining.</p>
+            <p>Here's an example:</p>
+            <article class="example" id="auto-fit-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(auto-fit, minmax(75x, 1fr));</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
         </section>
 
     </main>
