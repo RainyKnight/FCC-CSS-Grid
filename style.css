@@ -270,7 +270,7 @@ input[type=submit]:hover {
 }
 
 .item1 {
-    background-color: var(--salmon);
+    background-color: var(--white);
     grid-area: header;
 }
 
@@ -290,6 +290,6 @@ input[type=submit]:hover {
 }
 
 .item5 {
-    background-color: var(--salmon);
+    background-color: var(--white);
     grid-area: footer;
 }
