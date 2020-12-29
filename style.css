@@ -47,10 +47,11 @@ main {
 
 nav {
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
     position: fixed;
     background-color: var(--white);
     border-style: solid;
-    padding: 15px;
     width: 100%;
     left: 0px;
     top: 0px;
@@ -67,12 +68,6 @@ nav>a {
 nav>a:hover {
     background-color: var(--pinkish);
     color: var(--dark-blue);
-}
-
-@media (max-width: 500px) {
-    nav>a {
-        font-size: 1.5rem;
-    }
 }
 
 footer {
