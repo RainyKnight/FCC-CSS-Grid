@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid | Basics</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8e26bc0d4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Placed hr at the top so the up button would navigate to the true top of the page -->
+    <hr id="top">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <!-- columns,rows, size, gap -->
+            <a href="basics.html">Basics</a>
+            <a href="lines.html">Lines</a>
+            <a href="align.html">Align</a>
+            <a href="justify.html">Justify</a>
+            <a href="areas.html">Areas</a>
+            <a href="functions.html">Functions</a>
+            <a href="auto.html">Auto</a>
+            <a href="media.html">Media</a>
+            <!-- gridception and mneumonics -->
+            <a href="Advanced.html">Advanced</a>
+
+        </nav>
+        <h1>CSS Grid Basics</h1>
+    </header>
+
+    <main>
+        <section id="initialization">
+            <h2>Initialization</h2>
+            <p>Before we can use CSS Grid, we need to declare a grid container.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">display:</p>
+                <p class="value"> grid;</p>
+                <div class="container">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+        </section>
+        <section id="columns">
+            <h2>Columns</h2>
+            <p>Content can be organized into columns.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">grid-template-columns: </p>
+                <p class="value">1fr 2fr 1fr;</p>
+                <div class="container" style="grid-template-columns: 1fr 2fr 1fr;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>The number of width declarations determine how many columns there will be.</p>
+        </section>
+        <section id="rows">
+            <h2>Rows</h2>
+            <p>Content can be organized into rows.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">grid-template-rows:</p>
+                <p class="value">50px 100px 50px;</p>
+                <div class="container" style="grid-template-rows: 50px 100px 50px;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                </div>
+            </article>
+            <p>Similar to columns, the number of width declarations determine how many rows there will be.</p>
+        </section>
+
+    </main>
+    <a href="#top">
+        <i class="fas fa-chevron-up" id="up-button"></i>
+    </a>
+    <footer>
+        <p>Copyright &copy; Lucas Stoltman
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+        </p>
+        <a href="feedback.html" title="feedback">Send feedback here</a>
+
+    </footer>
+</body>
+
+<!-- TODO List
+
+
+-->
+
+</html>
