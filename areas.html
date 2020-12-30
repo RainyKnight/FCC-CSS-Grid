@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid | Areas</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8e26bc0d4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Placed hr at the top so the up button would navigate to the true top of the page -->
+    <hr id="top">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="basics.html">Basics</a>
+            <a href="lines.html">Lines</a>
+            <a href="align.html">Align</a>
+            <a href="justify.html">Justify</a>
+            <a href="areas.html">Areas</a>
+            <a href="functions.html">Functions</a>
+            <a href="auto.html">Auto</a>
+            <a href="media.html">Media</a>
+            <a href="Advanced.html">Advanced</a>
+
+        </nav>
+        <h1>CSS Grid Areas</h1>
+    </header>
+
+    <main>
+
+        <section id="areas">
+            <h2>Areas</h2>
+            <p>Sections of a grid can be combined into areas.</p>
+            <p>You fist need to declare a template to define </p>
+            <article class="example" id="area-tmeplate">
+                <p class="property">grid-template-areas:</p>
+                <p class="value">"header header header"</p>
+                <p class="value">". content ."</p>
+                <p class="value">"footer footer footer";</p>
+                <div class="container columns rows grid-area">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>The <code>.</code> signify empty areas.</p>
+            <hr>
+            <p>The below example is applied to the individual items in the container to define where they go:</p>
+            <article class="example" id="area-declaration">
+                <p class="property">grid-area:</p>
+                <p class="value">header;</p>
+                <div class="container columns rows grid-area">
+                    <div class="dark" style="grid-area: header;">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                </div>
+            </article>
+            <p>Further declarations of the same area overlap the previous one.</p>
+            <hr>
+            <p>But what if there's isn't a template already created?</p>
+            <p>A template can be created quickly on the fly with the below example:</p>
+            <p><code>item1 { grid-area: 1/1/2/4; }</code></p>
+            <p>x start/y start/x end/y end;</p>
+            <p>The numbers reference the lines of the grid as defined earlier in the Lines section.</p>
+            <article class="example" id="area-template-shorthand">
+                <p class="property">grid-area:</p>
+                <p class="value">1/2/4/3;</p>
+                <div class="container columns rows">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark" style="grid-area: 1/2/4/3;">3</div>
+            </article>
+        </section>
+
+    </main>
+    <a href="#top">
+        <i class="fas fa-chevron-up" id="up-button"></i>
+    </a>
+    <footer>
+        <p>Copyright &copy; Lucas Stoltman
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+        </p>
+        <a href="feedback.html" title="feedback">Send feedback here</a>
+
+    </footer>
+</body>
+
+<!-- TODO List
+
+
+-->
+
+</html>

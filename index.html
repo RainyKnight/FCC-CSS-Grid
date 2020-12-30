@@ -47,53 +47,6 @@
             </blockquote>
         </section>
 
-        <section id="areas">
-            <h2>Areas</h2>
-            <p>Sections of a grid can be combined into areas.</p>
-            <p>You fist need to declare a template to define </p>
-            <article class="example" id="area-tmeplate">
-                <p class="property">grid-template-areas:</p>
-                <p class="value">"header header header"</p>
-                <p class="value">". content ."</p>
-                <p class="value">"footer footer footer";</p>
-                <div class="container columns rows grid-area">
-                    <div class=" dark">1</div>
-                    <div class="light">2</div>
-                    <div class="dark">3</div>
-                    <div class="light">4</div>
-                    <div class="dark">5</div>
-                    <div class="light">6</div>
-                </div>
-            </article>
-            <p>The <code>.</code> signify empty areas.</p>
-            <hr>
-            <p>The below example is applied to the individual items in the container to define where they go:</p>
-            <article class="example" id="area-declaration">
-                <p class="property">grid-area:</p>
-                <p class="value">header;</p>
-                <div class="container columns rows grid-area">
-                    <div class="dark" style="grid-area: header;">1</div>
-                    <div class="light">2</div>
-                    <div class="dark">3</div>
-                </div>
-            </article>
-            <p>Further declarations of the same area overlap the previous one.</p>
-            <hr>
-            <p>But what if there's isn't a template already created?</p>
-            <p>A template can be created quickly on the fly with the below example:</p>
-            <p><code>item1 { grid-area: 1/1/2/4; }</code></p>
-            <p>x start/y start/x end/y end;</p>
-            <p>The numbers reference the lines of the grid as defined earlier in the Lines section.</p>
-            <article class="example" id="area-template-shorthand">
-                <p class="property">grid-area:</p>
-                <p class="value">1/2/4/3;</p>
-                <div class="container columns rows">
-                    <div class="dark">1</div>
-                    <div class="light">2</div>
-                    <div class="dark" style="grid-area: 1/2/4/3;">3</div>
-            </article>
-        </section>
-
         <section id="auto-fill">
             <h2>Auto-fill</h2>
             <p>Auto fill can dynamically adjust how many items populate based on the remaining room in a row or column.
