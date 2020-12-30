@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid | Auto</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8e26bc0d4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Placed hr at the top so the up button would navigate to the true top of the page -->
+    <hr id="top">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="basics.html">Basics</a>
+            <a href="lines.html">Lines</a>
+            <a href="align.html">Align</a>
+            <a href="justify.html">Justify</a>
+            <a href="areas.html">Areas</a>
+            <a href="functions.html">Functions</a>
+            <a href="auto.html">Auto</a>
+            <a href="media.html">Media</a>
+            <a href="Advanced.html">Advanced</a>
+
+        </nav>
+        <h1>CSS Grid Auto</h1>
+    </header>
+
+    <main>
+
+        <section id="auto-fill">
+            <h2>Auto-fill</h2>
+            <p>Auto fill can dynamically adjust how many items populate based on the remaining room in a row or column.
+            </p>
+            <p>Here's an example:</p>
+            <article class="example" id="auto-fill-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(auto-fill, minmax(75px, 1fr);</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>It takes the place of the number of iterations declaration.</p>
+        </section>
+
+        <section id="auto-fit">
+            <h2>Auto-fit</h2>
+            <p>Auto fit is almost identical to auto fill, except it also stretches the items once there's ample space
+                remaining.</p>
+            <p>Here's an example:</p>
+            <article class="example" id="auto-fit-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(auto-fit, minmax(75px, 1fr));</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <a href="#top">
+        <i class="fas fa-chevron-up" id="up-button"></i>
+    </a>
+    <footer>
+        <p>Copyright &copy; Lucas Stoltman
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+        </p>
+        <a href="feedback.html" title="feedback">Send feedback here</a>
+
+    </footer>
+</body>
+
+<!-- TODO List
+
+
+-->
+
+</html>
