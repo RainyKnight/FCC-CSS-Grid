@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid | Functions</title>
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8e26bc0d4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Placed hr at the top so the up button would navigate to the true top of the page -->
+    <hr id="top">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="basics.html">Basics</a>
+            <a href="lines.html">Lines</a>
+            <a href="align.html">Align</a>
+            <a href="justify.html">Justify</a>
+            <a href="areas.html">Areas</a>
+            <a href="functions.html">Functions</a>
+            <a href="auto.html">Auto</a>
+            <a href="media.html">Media</a>
+            <a href="Advanced.html">Advanced</a>
+
+        </nav>
+        <h1>CSS Grid Functions</h1>
+    </header>
+
+    <main>
+
+        <section id="repeat">
+            <h2>Repeat Function</h2>
+            <p>Let's say you have a grid that's 100x100. </p>
+            <p>It would be very tedious to declare every area over and over. So developers use a repetition function.
+            </p>
+            <article class="example" id="repeat-columns">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(10, 1fr);</p>
+                <div class="container" style=" grid-template-columns: repeat(10,1fr);">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>In the above example, the column repeats four times each with a width of one fraction of the total.</p>
+            <p>Here's what the statement would look like without the function:</p>
+            <article class="example" id="no-repeat">
+                <p class="property">grid-template-columns: </p>
+                <p class="value">1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;</p>
+            </article>
+            <hr>
+            <p>The function can even copy complex declarations:</p>
+            <article class="example" id="complex-repeat">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(2,10px 50px 20px);</p>
+                <div class="container" style=" grid-template-columns: repeat(2,10px 50px 20px);">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>As you can see the pattern of <code>10px 50px 20px</code> is repeated twice in the example above.</p>
+        </section>
+
+        <section id="minmax">
+            <h2>Min Max Function</h2>
+            <p>Sometimes you want to define bounds to the resizing of elements within your grid.</p>
+            <hr>
+            <h3>The Problem</h3>
+            <p>For example, if a window becomes too small or too large, some elements may extend beyond the edges of the
+                container to look something like this:</p>
+            <article class="example" id="overflow-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(3, 150px);</p>
+                <div class="container" style="grid-template-columns: repeat(3, 150px);">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <hr>
+            <h3>The Solution</h3>
+            <p>With <code>minmax()</code>, the rows or columns can stop resizing at specified measurements:</p>
+            <article class="example" id="minmax-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(3, minmax(10px, 150px));</p>
+                <div class="container" style="grid-template-columns: repeat(3, minmax(10px, 150px));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>In the above example, the columns can resize anywhere from 10px to 150px in width.</p>
+            <p>Try resizing the window to see it in action.</p>
+        </section>
+
+
+    </main>
+    <a href="#top">
+        <i class="fas fa-chevron-up" id="up-button"></i>
+    </a>
+    <footer>
+        <p>Copyright &copy; Lucas Stoltman
+            <script type="text/javascript">
+                document.write(new Date().getFullYear());
+            </script>
+        </p>
+        <a href="feedback.html" title="feedback">Send feedback here</a>
+
+    </footer>
+</body>
+
+<!-- TODO List
+
+
+-->
+
+</html>
