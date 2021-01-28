@@ -13,18 +13,23 @@
     <hr id="top">
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="basics.html">Basics</a>
-            <a href="lines.html">Lines</a>
-            <a href="align.html">Align</a>
-            <a href="justify.html">Justify</a>
-            <a href="areas.html">Areas</a>
-            <a href="functions.html">Functions</a>
-            <a href="auto.html">Auto</a>
-            <a href="media.html">Media</a>
-            <!-- gridception and mneumonics -->
-            <a href="Advanced.html">Advanced</a>
-
+            <a href="#top">home</a>
+            <a href="#initialization">initialization</a>
+            <a href="#columns">columns</a>
+            <a href="#rows">rows</a>
+            <a href="#change-size">change-size</a>
+            <a href="#gap">gap</a>
+            <a href="#lines">lines</a>
+            <a href="#align">align</a>
+            <a href="#justify">justify</a>
+            <a href="#areas">areas</a>
+            <a href="#repeat">repeat</a>
+            <a href="#minmax">minmax</a>
+            <a href="#auto-fill">auto-fill</a>
+            <a href="#auto-fit">auto-fit</a>
+            <a href="#media-query">media-query</a>
+            <a href="#mnemonics">mnemonics</a>
+            <a href="#gridception">gridception</a>
         </nav>
         <h1>CSS Grid</h1>
     </header>
@@ -35,475 +40,447 @@
             <p>CSS Grid helps organize content on a web page much like Flexbox.</p>
         </section>
 
-        <div id="basics">
-            <header>Basics</header>
-            <section id="initialization">
-                <h2>Initialization</h2>
-                <p>Before we can use CSS Grid, we need to declare a grid container.</p>
-                <p>Here's an example:</p>
-                <article class="example">
-                    <p class="property">display:</p>
-                    <p class="value"> grid;</p>
-                    <div class="container">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-            </section>
+        <section id="initialization">
+            <h2>Initialization</h2>
+            <p>Before we can use CSS Grid, we need to declare a grid container.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">display:</p>
+                <p class="value"> grid;</p>
+                <div class="container">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+        </section>
 
-            <section id="columns">
-                <h2>Columns</h2>
-                <p>Content can be organized into columns.</p>
-                <p>Here's an example:</p>
-                <article class="example">
-                    <p class="property">grid-template-columns: </p>
-                    <p class="value">1fr 2fr 1fr;</p>
-                    <div class="container" style="grid-template-columns: 1fr 2fr 1fr;">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>The number of width declarations determine how many columns there will be.</p>
-            </section>
+        <section id="columns">
+            <h2>Columns</h2>
+            <p>Content can be organized into columns.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">grid-template-columns: </p>
+                <p class="value">1fr 2fr 1fr;</p>
+                <div class="container" style="grid-template-columns: 1fr 2fr 1fr;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>The number of width declarations determine how many columns there will be.</p>
+        </section>
 
-            <section id="rows">
-                <h2>Rows</h2>
-                <p>Content can be organized into rows.</p>
-                <p>Here's an example:</p>
-                <article class="example">
-                    <p class="property">grid-template-rows:</p>
-                    <p class="value">50px 100px 50px;</p>
-                    <div class="container" style="grid-template-rows: 50px 100px 50px;">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                    </div>
-                </article>
-                <p>Similar to columns, the number of width declarations determine how many rows there will be.</p>
-            </section>
+        <section id="rows">
+            <h2>Rows</h2>
+            <p>Content can be organized into rows.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">grid-template-rows:</p>
+                <p class="value">50px 100px 50px;</p>
+                <div class="container" style="grid-template-rows: 50px 100px 50px;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                </div>
+            </article>
+            <p>Similar to columns, the number of width declarations determine how many rows there will be.</p>
+        </section>
 
-            <section id="change-size">
-                <h2>Changing Size</h2>
-                <p>There are multiple ways to declare the width of a row.</p>
-                <p>Here's an example:</p>
-                <article class="example">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value"> auto 50px 10% 2fr 1fr;</p>
-                    <div class="container" style="grid-template-columns: auto 50px 10% 2fr 1fr;">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>The <code>fr</code> unit divides the remaining space into fractions.
-                </p>
-            </section>
+        <section id="change-size">
+            <h2>Changing Size</h2>
+            <p>There are multiple ways to declare the width of a row.</p>
+            <p>Here's an example:</p>
+            <article class="example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value"> auto 50px 10% 2fr 1fr;</p>
+                <div class="container" style="grid-template-columns: auto 50px 10% 2fr 1fr;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>The <code>fr</code> unit divides the remaining space into fractions.
+            </p>
+        </section>
 
-            <section id="gap">
-                <h2>Gap</h2>
-                <p>Sometimes you want a gap between the items.</p>
-                <p>Here are some examples:</p>
-                <article class="example" id="column-gap">
-                    <p class="property">grid-column-gap:</p>
-                    <p class="value"> 10px;</p>
-                    <div class="container columns" style="grid-column-gap: 10px;">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
+        <section id="gap">
+            <h2>Gap</h2>
+            <p>Sometimes you want a gap between the items.</p>
+            <p>Here are some examples:</p>
+            <article class="example" id="column-gap">
+                <p class="property">grid-column-gap:</p>
+                <p class="value"> 10px;</p>
+                <div class="container columns" style="grid-column-gap: 10px;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
 
-                <article class="example" id="row-gap">
-                    <p class="property">grid-row-gap:</p>
-                    <p class="value"> 10px;</p>
-                    <div class="container columns rows" style="grid-row-gap: 10px;">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <hr>
-                <h3 style="text-align: center">Shorthand</h3>
-                <p>There's also shorthand that can be used when describing the gap.</p>
-                <p>grid-gap: &#60;rows&#62; &#60;columns&#62;;</p>
-                <article class="example" id="gap-shorthand">
-                    <p class="property">grid-gap:</p>
-                    <p class="value"> 100px 20px;</p>
-                    <div class="container columns rows" style="grid-gap: 100px 20px;">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-            </section>
+            <article class="example" id="row-gap">
+                <p class="property">grid-row-gap:</p>
+                <p class="value"> 10px;</p>
+                <div class="container columns rows" style="grid-row-gap: 10px;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <hr>
+            <h3 style="text-align: center">Shorthand</h3>
+            <p>There's also shorthand that can be used when describing the gap.</p>
+            <p>grid-gap: &#60;rows&#62; &#60;columns&#62;;</p>
+            <article class="example" id="gap-shorthand">
+                <p class="property">grid-gap:</p>
+                <p class="value"> 100px 20px;</p>
+                <div class="container columns rows" style="grid-gap: 100px 20px;">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+        </section>
 
-        </div>
+        <section id="lines">
+            <h2>Lines</h2>
+            <img src="https://www.w3schools.com/css/grid_lines.png" alt="grid lines graph">
+            <p>Spacing affects the elements within the containers themselves. So the CSS below is applied directly
+                to
+                the box that stretches.</p>
+            <article class="example" id="grid-column">
+                <p class="property">grid-column:</p>
+                <p class="value"> 2/4;</p>
+                <div class="container columns rows">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark" style="grid-column: 2/4;">5</div>
+                </div>
+            </article>
+            <p>The "2/4" specifies it will span from column lines 2-4.</p>
+            <article class="example" id="grid-row">
+                <p class="property">grid-row:</p>
+                <p class="value"> 2/4;</p>
+                <div class="container columns rows">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark" style="grid-column: 2/4; grid-row: 2/4;">5</div>
+                </div>
+            </article>
+            <p>The " 2/4" specifies it will span from row lines 2-4.</p>
+        </section>
 
-        <div id="lines">
-            <header>Lines</header>
-            <section id="lines">
-                <h2>Lines</h2>
-                <img src="https://www.w3schools.com/css/grid_lines.png" alt="grid lines graph">
-                <p>Spacing affects the elements within the containers themselves. So the CSS below is applied directly
-                    to
-                    the box that stretches.</p>
-                <article class="example" id="grid-column">
-                    <p class="property">grid-column:</p>
-                    <p class="value"> 2/4;</p>
-                    <div class="container columns rows">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark" style="grid-column: 2/4;">5</div>
-                    </div>
-                </article>
-                <p>The "2/4" specifies it will span from column lines 2-4.</p>
-                <article class="example" id="grid-row">
-                    <p class="property">grid-row:</p>
-                    <p class="value"> 2/4;</p>
-                    <div class="container columns rows">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark" style="grid-column: 2/4; grid-row: 2/4;">5</div>
-                    </div>
-                </article>
-                <p>The " 2/4" specifies it will span from row lines 2-4.</p>
-            </section>
-        </div>
+        <section id="align">
+            <h2>Align</h2>
+            <p>Items can be arranged within their cells to position toward the <code>start</code>,
+                <code>center</code>,
+                or <code>end</code> respectively.
+            </p>
+            <p>Align means vertical positioning.</p>
+            <hr>
+            <h3><u>Individual Items</u></h3>
+            <article class="example" id="align-self">
+                <p class="property">align-self:</p>
+                <p class="value">start;</p>
+                <p class="value">center;</p>
+                <p class="value">end;</p>
+                <div class="container columns" style="height: 300px;">
+                    <div class="dark tall" style="align-self: start;">1</div>
+                    <div class="light tall" style="align-self: center;">2</div>
+                    <div class="dark tall" style="align-self: end;">3</div>
+                </div>
+            </article>
+            <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
+            <hr>
+            <h3><u>All Items</u></h3>
+            <article class="example" id="align-items">
+                <p class="property">align-items:</p>
+                <p class="value">center;</p>
+                <div class="container columns" style="height: 300px; align-items: center;">
+                    <div class="dark tall">1</div>
+                    <div class="light tall">2</div>
+                    <div class="dark tall">3</div>
+                </div>
+            </article>
+            <p>The <code>items</code> property defines that this CSS it applied to the container and affects all
+                items
+                within.</p>
+        </section>
 
-        <div id="align">
-            <header>Align</header>
-            <section id="align">
-                <h2>Align</h2>
-                <p>Items can be arranged within their cells to position toward the <code>start</code>,
-                    <code>center</code>,
-                    or <code>end</code> respectively.
-                </p>
-                <p>Align means vertical positioning.</p>
-                <hr>
-                <h3><u>Individual Items</u></h3>
-                <article class="example" id="align-self">
-                    <p class="property">align-self:</p>
-                    <p class="value">start;</p>
-                    <p class="value">center;</p>
-                    <p class="value">end;</p>
-                    <div class="container columns" style="height: 300px;">
-                        <div class="dark tall" style="align-self: start;">1</div>
-                        <div class="light tall" style="align-self: center;">2</div>
-                        <div class="dark tall" style="align-self: end;">3</div>
-                    </div>
-                </article>
-                <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
-                <hr>
-                <h3><u>All Items</u></h3>
-                <article class="example" id="align-items">
-                    <p class="property">align-items:</p>
-                    <p class="value">center;</p>
-                    <div class="container columns" style="height: 300px; align-items: center;">
-                        <div class="dark tall">1</div>
-                        <div class="light tall">2</div>
-                        <div class="dark tall">3</div>
-                    </div>
-                </article>
-                <p>The <code>items</code> property defines that this CSS it applied to the container and affects all
-                    items
-                    within.</p>
-            </section>
-        </div>
+        <section id="justify">
+            <h2>Justify</h2>
+            <p>Items can be arranged within their cells to position toward the <code>start</code>,
+                <code>center</code>,
+                or <code>end</code>.
+            </p>
+            <p>Justify means horizontal positioning.</p>
+            <hr>
+            <h3><u>Individual Items</u></h3>
+            <article class="example" id="justify-self">
+                <p class="property">justify-self:</p>
+                <p class="value">start;</p>
+                <p class="value">center;</p>
+                <p class="value">end;</p>
+                <div class="container">
+                    <div class="dark wide" style="justify-self: start;">1</div>
+                    <div class="light wide" style="justify-self: center;">2</div>
+                    <div class="dark wide" style="justify-self: end;">3</div>
+                </div>
+            </article>
+            <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
+            <hr>
+            <h3><u>All Items</u></h3>
+            <article class="example rows" id="justify-items">
+                <p class="property">justify-items:</p>
+                <p class="value">center;</p>
+                <div class="container" style="justify-items: center;">
+                    <div class="dark wide">1</div>
+                    <div class="light wide">2</div>
+                    <div class="dark wide">3</div>
+                </div>
+            </article>
+            <p>The <code>items</code> property defines that this CSS it applied to the container and affects all
+                items
+                within.</p>
+        </section>
 
-        <div id="justify">
-            <header>Justify</header>
-            <section id="justify">
-                <h2>Justify</h2>
-                <p>Items can be arranged within their cells to position toward the <code>start</code>,
-                    <code>center</code>,
-                    or <code>end</code>.
-                </p>
-                <p>Justify means horizontal positioning.</p>
-                <hr>
-                <h3><u>Individual Items</u></h3>
-                <article class="example" id="justify-self">
-                    <p class="property">justify-self:</p>
-                    <p class="value">start;</p>
-                    <p class="value">center;</p>
-                    <p class="value">end;</p>
-                    <div class="container">
-                        <div class="dark wide" style="justify-self: start;">1</div>
-                        <div class="light wide" style="justify-self: center;">2</div>
-                        <div class="dark wide" style="justify-self: end;">3</div>
-                    </div>
-                </article>
-                <p>The <code>self</code> property defines that this CSS it applied to each individual item.</p>
-                <hr>
-                <h3><u>All Items</u></h3>
-                <article class="example rows" id="justify-items">
-                    <p class="property">justify-items:</p>
-                    <p class="value">center;</p>
-                    <div class="container" style="justify-items: center;">
-                        <div class="dark wide">1</div>
-                        <div class="light wide">2</div>
-                        <div class="dark wide">3</div>
-                    </div>
-                </article>
-                <p>The <code>items</code> property defines that this CSS it applied to the container and affects all
-                    items
-                    within.</p>
-            </section>
-        </div>
+        <section id="areas">
+            <h2>Areas</h2>
+            <p>Sections of a grid can be combined into areas.</p>
+            <p>You first need to declare a template to define:</p>
+            <article class="example" id="area-tmeplate">
+                <p class="property">grid-template-areas:</p>
+                <p class="value">"header header header"</p>
+                <p class="value">". content ."</p>
+                <p class="value">"footer footer footer";</p>
+                <div class="container columns rows grid-area">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>The <code>.</code> signify empty areas.</p>
+            <hr>
+            <p>The below example is applied to the individual items in the container to define where they go:</p>
+            <article class="example" id="area-declaration">
+                <p class="property">grid-area:</p>
+                <p class="value">header;</p>
+                <div class="container columns rows grid-area">
+                    <div class="dark" style="grid-area: header;">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                </div>
+            </article>
+            <p>Further declarations of the same area overlap the previous one.</p>
+            <hr>
+            <p>But what if there's isn't a template already created?</p>
+            <p>A template can be created quickly on the fly with the below example:</p>
+            <p><code>item1 { grid-area: 1/1/2/4; }</code></p>
+            <p>x start/y start/x end/y end;</p>
+            <p>The numbers reference the lines of the grid as defined earlier in the Lines section.</p>
+            <article class="example" id="area-template-shorthand">
+                <p class="property">grid-area:</p>
+                <p class="value">1/2/4/3;</p>
+                <div class="container columns rows">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark" style="grid-area: 1/2/4/3;">3</div>
+            </article>
+        </section>
 
-        <div id="areas">
-            <header>Areas</header>
-            <section id="areas">
-                <h2>Areas</h2>
-                <p>Sections of a grid can be combined into areas.</p>
-                <p>You first need to declare a template to define:</p>
-                <article class="example" id="area-tmeplate">
-                    <p class="property">grid-template-areas:</p>
-                    <p class="value">"header header header"</p>
-                    <p class="value">". content ."</p>
-                    <p class="value">"footer footer footer";</p>
-                    <div class="container columns rows grid-area">
-                        <div class=" dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>The <code>.</code> signify empty areas.</p>
-                <hr>
-                <p>The below example is applied to the individual items in the container to define where they go:</p>
-                <article class="example" id="area-declaration">
-                    <p class="property">grid-area:</p>
-                    <p class="value">header;</p>
-                    <div class="container columns rows grid-area">
-                        <div class="dark" style="grid-area: header;">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                    </div>
-                </article>
-                <p>Further declarations of the same area overlap the previous one.</p>
-                <hr>
-                <p>But what if there's isn't a template already created?</p>
-                <p>A template can be created quickly on the fly with the below example:</p>
-                <p><code>item1 { grid-area: 1/1/2/4; }</code></p>
-                <p>x start/y start/x end/y end;</p>
-                <p>The numbers reference the lines of the grid as defined earlier in the Lines section.</p>
-                <article class="example" id="area-template-shorthand">
-                    <p class="property">grid-area:</p>
-                    <p class="value">1/2/4/3;</p>
-                    <div class="container columns rows">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark" style="grid-area: 1/2/4/3;">3</div>
-                </article>
-            </section>
-        </div>
+        <section id="repeat">
+            <h2>Repeat Function</h2>
+            <p>Let's say you have a grid that's 100x100. </p>
+            <p>It would be very tedious to declare every area over and over. So developers use a repetition
+                function.
+            </p>
+            <article class="example" id="repeat-columns">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(10, 1fr);</p>
+                <div class="container" style=" grid-template-columns: repeat(10,1fr);">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>In the above example, the column repeats four times each with a width of one fraction of the total.
+            </p>
+            <p>Here's what the statement would look like without the function:</p>
+            <article class="example" id="no-repeat">
+                <p class="property">grid-template-columns: </p>
+                <p class="value">1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;</p>
+            </article>
+            <hr>
+            <p>The function can even copy complex declarations:</p>
+            <article class="example" id="complex-repeat">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(2,10px 50px 20px);</p>
+                <div class="container" style=" grid-template-columns: repeat(2,10px 50px 20px);">
+                    <div class=" dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>As you can see the pattern of <code>10px 50px 20px</code> is repeated twice in the example above.</p>
+        </section>
 
-        <div id="functions">
-            <header>Functions</header>
-            <section id="repeat">
-                <h2>Repeat Function</h2>
-                <p>Let's say you have a grid that's 100x100. </p>
-                <p>It would be very tedious to declare every area over and over. So developers use a repetition
-                    function.
-                </p>
-                <article class="example" id="repeat-columns">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value">repeat(10, 1fr);</p>
-                    <div class="container" style=" grid-template-columns: repeat(10,1fr);">
-                        <div class=" dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>In the above example, the column repeats four times each with a width of one fraction of the total.
-                </p>
-                <p>Here's what the statement would look like without the function:</p>
-                <article class="example" id="no-repeat">
-                    <p class="property">grid-template-columns: </p>
-                    <p class="value">1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;</p>
-                </article>
-                <hr>
-                <p>The function can even copy complex declarations:</p>
-                <article class="example" id="complex-repeat">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value">repeat(2,10px 50px 20px);</p>
-                    <div class="container" style=" grid-template-columns: repeat(2,10px 50px 20px);">
-                        <div class=" dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>As you can see the pattern of <code>10px 50px 20px</code> is repeated twice in the example above.</p>
-            </section>
+        <section id="minmax">
+            <h2>Min Max Function</h2>
+            <p>Sometimes you want to define bounds to the resizing of elements within your grid.</p>
+            <hr>
+            <h3>The Problem</h3>
+            <p>For example, if a window becomes too small or too large, some elements may extend beyond the edges of
+                the
+                container to look something like this:</p>
+            <article class="example" id="overflow-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(3, 150px);</p>
+                <div class="container" style="grid-template-columns: repeat(3, 150px);">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <hr>
+            <h3>The Solution</h3>
+            <p>With <code>minmax()</code>, the rows or columns can stop resizing at specified measurements:</p>
+            <article class="example" id="minmax-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(3, minmax(10px, 150px));</p>
+                <div class="container" style="grid-template-columns: repeat(3, minmax(10px, 150px));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>In the above example, the columns can resize anywhere from 10px to 150px in width.</p>
+            <p>Try resizing the window to see it in action.</p>
+        </section>
 
-            <section id="minmax">
-                <h2>Min Max Function</h2>
-                <p>Sometimes you want to define bounds to the resizing of elements within your grid.</p>
-                <hr>
-                <h3>The Problem</h3>
-                <p>For example, if a window becomes too small or too large, some elements may extend beyond the edges of
-                    the
-                    container to look something like this:</p>
-                <article class="example" id="overflow-example">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value">repeat(3, 150px);</p>
-                    <div class="container" style="grid-template-columns: repeat(3, 150px);">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <hr>
-                <h3>The Solution</h3>
-                <p>With <code>minmax()</code>, the rows or columns can stop resizing at specified measurements:</p>
-                <article class="example" id="minmax-example">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value">repeat(3, minmax(10px, 150px));</p>
-                    <div class="container" style="grid-template-columns: repeat(3, minmax(10px, 150px));">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>In the above example, the columns can resize anywhere from 10px to 150px in width.</p>
-                <p>Try resizing the window to see it in action.</p>
-            </section>
-        </div>
+        <section id="auto-fill">
+            <h2>Auto-fill</h2>
+            <p>Auto fill can dynamically adjust how many items populate based on the remaining room in a row or
+                column.
+            </p>
+            <p>Here's an example:</p>
+            <article class="example" id="auto-fill-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(auto-fill, minmax(75px, 1fr);</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+            <p>It takes the place of the number of iterations declaration.</p>
+        </section>
 
-        <div id="auto">
-            <header>Auto</header>
-            <section id="auto-fill">
-                <h2>Auto-fill</h2>
-                <p>Auto fill can dynamically adjust how many items populate based on the remaining room in a row or
-                    column.
-                </p>
-                <p>Here's an example:</p>
-                <article class="example" id="auto-fill-example">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value">repeat(auto-fill, minmax(75px, 1fr);</p>
-                    <div class="container" style="grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-                <p>It takes the place of the number of iterations declaration.</p>
-            </section>
+        <section id="auto-fit">
+            <h2>Auto-fit</h2>
+            <p>Auto fit is almost identical to auto fill, except it also stretches the items once there's ample
+                space
+                remaining.</p>
+            <p>Here's an example:</p>
+            <article class="example" id="auto-fit-example">
+                <p class="property">grid-template-columns:</p>
+                <p class="value">repeat(auto-fit, minmax(75px, 1fr));</p>
+                <div class="container" style="grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));">
+                    <div class="dark">1</div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                    <div class="light">4</div>
+                    <div class="dark">5</div>
+                    <div class="light">6</div>
+                </div>
+            </article>
+        </section>
 
-            <section id="auto-fit">
-                <h2>Auto-fit</h2>
-                <p>Auto fit is almost identical to auto fill, except it also stretches the items once there's ample
-                    space
-                    remaining.</p>
-                <p>Here's an example:</p>
-                <article class="example" id="auto-fit-example">
-                    <p class="property">grid-template-columns:</p>
-                    <p class="value">repeat(auto-fit, minmax(75px, 1fr));</p>
-                    <div class="container" style="grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));">
-                        <div class="dark">1</div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
-                        <div class="light">4</div>
-                        <div class="dark">5</div>
-                        <div class="light">6</div>
-                    </div>
-                </article>
-            </section>
-        </div>
+        <section id="media-query">
+            <h2>Media Query</h2>
+            <p>Sometimes you want to dynamically move areas of the grid around like you would with CSS motion.</p>
+            <p>A media query can do just that:</p>
+            <article class="example" id="media-query-example">
+                <p class="property">@media (max-width: 500px) {</p>
+                <p class="value">"phone layout stylings" }</p>
+                <div class="container media-query">
+                    <div class="item1">header</div>
+                    <div class="item2">ad #1</div>
+                    <div class="item3">content</div>
+                    <div class="item4">ad #2</div>
+                    <div class="item5">footer</div>
+                </div>
+            </article>
+            <p>Try resizing the window to see the layout change!</p>
+        </section>
 
-        <div id="media">
-            <header>Media</header>
-            <section id="media-query">
-                <h2>Media Query</h2>
-                <p>Sometimes you want to dynamically move areas of the grid around like you would with CSS motion.</p>
-                <p>A media query can do just that:</p>
-                <article class="example" id="media-query-example">
-                    <p class="property">@media (max-width: 500px) {</p>
-                    <p class="value">"phone layout stylings" }</p>
-                    <div class="container media-query">
-                        <div class="item1">header</div>
-                        <div class="item2">ad #1</div>
-                        <div class="item3">content</div>
-                        <div class="item4">ad #2</div>
-                        <div class="item5">footer</div>
-                    </div>
-                </article>
-                <p>Try resizing the window to see the layout change!</p>
-            </section>
-        </div>
+        <section id="mnemonics">
+            <h2>Mnemonics</h2>
+            <p>Having trouble remembering the difference between align and justify?</p>
+            <blockquote
+                cite="https://css-tricks.com/a-quick-way-to-remember-difference-between-justify-content-align-items/">
+                <ul>
+                    <li><code>justify-content:</code> longer word: horizontal alignment</li>
+                    <li><code>align-items:</code> shorter word: vertical alignment</li>
+                </ul>
+            </blockquote>
+        </section>
 
-        <div id="advanced">
-            <header>Advanced</header>
-            <section id="pneumonics-trick">
-                <h2>Mnemonics</h2>
-                <p>Having trouble remembering the difference between align and justify?</p>
-                <blockquote
-                    cite="https://css-tricks.com/a-quick-way-to-remember-difference-between-justify-content-align-items/">
-                    <ul>
-                        <li><code>justify-content:</code> longer word: horizontal alignment</li>
-                        <li><code>align-items:</code> shorter word: vertical alignment</li>
-                    </ul>
-                </blockquote>
-            </section>
-
-            <section id="grid-in-grid">
-                <h2>Gridception</h2>
-                <p>Grid elements can also be nested within other grid elements.</p>
-                <p>This can help the developer to further organize information as seen below:</p>
-                <article class="example" id="grid-in-grid-example">
-                    <div class="container">
-                        <div class="dark" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
-                            <div style="background-color: red;">a</div>
-                            <div style="background-color: green;">b</div>
-                            <div style="background-color: blue;">c</div>
-                        </div>
-                        <div class="light">2</div>
-                        <div class="dark">3</div>
+        <section id="gridception">
+            <h2>Gridception</h2>
+            <p>Grid elements can also be nested within other grid elements.</p>
+            <p>This can help the developer to further organize information as seen below:</p>
+            <article class="example" id="gridception-example">
+                <div class="container">
+                    <div class="dark" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                        <div style="background-color: red;">a</div>
+                        <div style="background-color: green;">b</div>
+                        <div style="background-color: blue;">c</div>
                     </div>
-                </article>
-            </section>
-        </div>
+                    <div class="light">2</div>
+                    <div class="dark">3</div>
+                </div>
+            </article>
+        </section>
 
     </main>
     <a href="#top">
@@ -531,7 +508,7 @@
 
  * Push footer to bottom of the page with CSS
 
- * 
+ * Add a side navbar like technical documentation
 
  * 
 
