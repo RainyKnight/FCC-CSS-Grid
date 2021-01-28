@@ -27,7 +27,6 @@ body::-webkit-scrollbar {
     /* Firefox */
 }
 
-
 body {
     display: grid;
     grid-template-columns: 300px auto;
@@ -79,8 +78,6 @@ body {
     scrollbar-width: none;
     /* Firefox */
 }
-
-
 
 h1 {
     text-align: center;
@@ -193,6 +190,12 @@ li {
     background-color: var(--dark-blue);
     padding: 10px;
     box-shadow: var(--normal-shadow);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 article>p {
