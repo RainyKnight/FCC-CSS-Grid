@@ -65,6 +65,7 @@ nav {
 
 nav>a {
     text-decoration: none;
+    text-transform: capitalize;
     font-size: 1rem;
     color: var(--white);
     background-color: var(--dark-blue);
