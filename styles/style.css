@@ -19,7 +19,22 @@
 body {
     display: grid;
     grid-template-columns: 300px auto;
-    grid-template-areas: "nav content" "footer footer";
+    grid-template-areas: "sidebar content" "footer footer";
+}
+
+/* Mobile layout */
+
+@media (max-width:500px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "sidebar" "content" "footer";
+    }
+    .sidebar {
+        width: 100%;
+
+    }
 }
 
 /* Reduced the margin so the up button will scroll to the very top of the page instead of the element below the top margin */
@@ -28,22 +43,23 @@ body {
     margin-top: -10px;
 }
 
+.sidebar {
+    grid-area: sidebar;
+    border: 5px solid var(--white);
+    position: fixed;
+    padding: 1rem;
+    height: 94vh;
+}
+
 h1 {
     text-align: center;
     color: var(--white);
     font-size: 48px;
-    margin: 70px 50px 20px 50px;
+    margin: 20px 50px 20px 50px;
     font-family: 'Times New Roman', Times, serif;
-    box-shadow: var(--normal-shadow);
-    border-style: solid;
     grid-area: header;
 }
 
-@media (max-width: 700px) {
-    h1 {
-        margin-top: 8rem;
-    }
-}
 
 main {
     background-color: var(--pinkish);
@@ -62,16 +78,12 @@ header {
 }
 
 nav {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* position: fixed; */
     background-color: var(--white);
     border-style: solid;
-    width: 100%;
-    left: 0px;
-    grid-area: nav;
 }
 
 nav>a {
@@ -81,7 +93,6 @@ nav>a {
     color: var(--white);
     background-color: var(--dark-blue);
     padding: 0.6rem;
-    margin: 0.2rem;
     border-style: solid;
 }
 
@@ -91,12 +102,8 @@ nav>a:hover {
 }
 
 footer {
-    position: absolute;
     background-color: var(--white);
-    padding: 10px;
-    margin: auto;
     margin-top: 20px;
-    left: 0px;
     width: 100%;
     grid-area: footer;
 }
