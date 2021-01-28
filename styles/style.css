@@ -16,6 +16,12 @@
     scroll-behavior: smooth;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-areas: "nav content" "footer footer";
+}
+
 /* Reduced the margin so the up button will scroll to the very top of the page instead of the element below the top margin */
 
 #top {
@@ -51,16 +57,21 @@ main {
     grid-area: content;
 }
 
+header {
+    grid-area: nav;
+}
+
 nav {
     text-align: left;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    position: fixed;
+    /* position: fixed; */
     background-color: var(--white);
     border-style: solid;
     width: 100%;
     left: 0px;
-    top: 0px;
+    grid-area: nav;
 }
 
 nav>a {
@@ -87,6 +98,7 @@ footer {
     margin-top: 20px;
     left: 0px;
     width: 100%;
+    grid-area: footer;
 }
 
 img {
