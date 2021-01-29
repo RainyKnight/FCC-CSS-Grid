@@ -17,8 +17,7 @@
     scroll-behavior: smooth;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-/* Hide scrollbars but keep functionality */
+/* Hide scroll-bars but keep functionality */
 
 body::-webkit-scrollbar {
     display: none;
@@ -31,33 +30,19 @@ body::-webkit-scrollbar {
 
 body {
     display: grid;
-    grid-template-columns: var(--sidebar-width) auto;
-    grid-template-areas: "sidebar content" "sidebar footer";
-}
-
-/* Mobile layout */
-
-@media (max-width:500px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "sidebar" "content" "footer";
-    }
-    .sidebar {
-        width: 100%;
-        top: -5px;
-        left: -5px;
-    }
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-areas: "top top" "sidebar content" "sidebar footer";
 }
 
 /* Reduced the margin so the up button will scroll to the very top of the page instead of the element below the top margin */
 
 #top {
     margin-top: -10px;
+    grid-area: top;
 }
 
 .sidebar {
+    position: fixed;
     grid-area: sidebar;
     top: 0px;
     left: 0px;
@@ -65,13 +50,13 @@ body {
     width: var(--sidebar-width);
     background-color: var(--salmon);
     border: 5px solid var(--black);
-    position: fixed;
+    border-top: none;
     padding: 1rem;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-/* Hide scrollbars but keep functionality */
+/* Hide scroll-bars but keep functionality */
 
 .sidebar::-webkit-scrollbar {
     display: none;
@@ -82,9 +67,41 @@ body {
     /* Firefox */
 }
 
+/* Mobile layout */
+
+@media (max-width:850px) {
+    body {
+        display: grid;
+        grid-template-columns: auto !important;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "top" "sidebar" "content" "footer";
+    }
+    .sidebar {
+        all: unset;
+        /* display: flex; */
+        position: relative;
+        grid-area: sidebar;
+        background-color: var(--salmon);
+        border: 5px solid var(--black);
+    }
+    #up-button {
+        display: initial !important;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        font-size: 24pt;
+        padding: 10px;
+        border-style: solid;
+        border-radius: 10px;
+        color: var(--dark-blue);
+        background-color: var(--salmon);
+    }
+}
+
 h1 {
     text-align: center;
     color: var(--black);
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 48px;
     margin: 0.5rem;
     font-weight: 600;
@@ -94,7 +111,7 @@ h1 {
 
 main {
     background-color: var(--pinkish);
-    margin: auto;
+    /* margin: auto; */
     margin-left: 10%;
     margin-right: 10%;
     padding: 10px;
@@ -119,6 +136,7 @@ nav {
 nav>a {
     text-decoration: none;
     text-transform: capitalize;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 1rem;
     color: var(--white);
     background-color: var(--dark-blue);
@@ -154,6 +172,7 @@ section {
 
 h2 {
     text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
     box-shadow: var(--normal-shadow);
     background-color: var(--salmon);
     color: var(--black);
@@ -298,6 +317,7 @@ input[type=submit]:hover {
 }
 
 #up-button {
+    display: none;
     position: fixed;
     right: 20px;
     bottom: 20px;
